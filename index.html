@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <link href="styles/reset.css" rel="stylesheet">
         <link href="styles/style.css" rel="stylesheet">
 
@@ -18,7 +20,10 @@
     <body>
         <nav>
             <h1>WeatherApp</h1>
-            <input type="text" class="searchbar" placeholder="Search city, country, ...">
+            <div class="searchbar-container">
+                <input type="text" class="searchbar" placeholder="Search city, country, ...">
+                <span id="search-btn" class="material-icons">search</span>
+            </div>
             <button id="switch-units-btn">
                 <span id="opt-celcius" class="unit-option-selected">°C</span>
                 <span id="opt-farenheit">°F</span>
