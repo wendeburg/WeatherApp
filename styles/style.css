@@ -69,13 +69,13 @@ nav h1 {
 }
 
 #opt-celcius {
-    transition: 0.5s;
+    transition: 0.1s;
     margin-right: 4px;
     margin-left: 5px;
 }
 
 #opt-farenheit {
-    transition: 0.5s;
+    transition: 0.1s;
     margin-left: 4px;
     margin-right: 5px;
 }

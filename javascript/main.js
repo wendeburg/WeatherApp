@@ -7,7 +7,25 @@ const main = ( () => {
     let unitsMetric = true;
     let lastPlaceLooked = '';
 
-    searchPlaceBtn.addEventListener('click', lookForData)
+    searchPlaceBtn.addEventListener('click', lookForData);
+    switchUnitsBtn.addEventListener('click', switchUnits);
+
+    function switchUnits() {
+        const unitOptions = document.querySelectorAll('.unit-option');
+        
+        if (unitOptions[0].classList.contains('unit-option-selected')) {
+            unitOptions[0].classList.remove('unit-option-selected');
+            unitOptions[1].classList.add('unit-option-selected');
+        }
+        else {
+            unitOptions[0].classList.add('unit-option-selected');
+            unitOptions[1].classList.remove('unit-option-selected');
+        }
+
+
+        unitsMetric = !unitsMetric;
+        lookForData();
+    }
 
     function showWeatherInfo(place, currentWeData, dailyWeData) {
         removeWeatherInfo(); // If there is already info. on the screen, remove it first.
@@ -73,7 +91,7 @@ const main = ( () => {
     }
 
     async function lookForData() {
-        const currWD = await apiFetchFns.getCurrentWeatherData(`${searchbar.value}`, unitsMetric);
+        const currWD = await apiFetchFns.getCurrentWeatherData(`${searchbar.value? searchbar.value : lastPlaceLooked}`, unitsMetric);
         const currWDProc = apiFetchFns.processCurrWeatherData(currWD);
         lastPlaceLooked = searchbar.value;
 
