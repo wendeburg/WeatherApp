@@ -7,12 +7,6 @@ body {
     align-items: center;
 }
 
-.page-container {
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 40px;
-}
-
 nav {
     position: absolute;
     top: 0;
@@ -163,6 +157,10 @@ nav h1 {
     border-right: 2px solid black;
 }
 
+#weather-img-desc {
+    text-transform: capitalize;
+}
+
 .extra-weather-info {
     width: 35%;
     margin-left: 20px;
@@ -255,6 +253,10 @@ footer a {
 }
 
 @media (max-width: 940px) {
+    body {
+        justify-content: flex-end;
+    }
+
     nav {
         flex-direction: column;
         height: max-content;
@@ -299,6 +301,7 @@ footer a {
     footer {
         height: 30px;
         font-size: 18px;
+        position: relative;
     }
 
     .weather-container {
