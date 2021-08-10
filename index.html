@@ -18,79 +18,22 @@
         <script defer src="javascript/main.js"></script>
     </head>
     <body>
-        <nav>
-            <h1>WeatherApp</h1>
-            <div class="searchbar-container">
-                <input type="text" class="searchbar" placeholder="Search city, country, ...">
-                <span id="search-btn" class="material-icons">search</span>
-            </div>
-            <button id="switch-units-btn">
-                <span id="opt-celcius" class="unit-option-selected">°C</span>
-                <span id="opt-farenheit">°F</span>
-            </button>
-        </nav>
-
-        <div class="weather-container">
-            <h2 class="place-info">Alicante, ES</h2>
-            <div class="current-weather-container">
-                <div class="temp-info">
-                    <p id="current-temp">29.0°C</p>
-                    <p class="info-text">Feels Like</p>
-                    <p id="current-temp-feels">29.0°C</p>
+        <div id="page-container">
+            <nav>
+                <h1>WeatherApp</h1>
+                <div class="searchbar-container">
+                    <input type="text" id="searchbar" placeholder="Search city, country, ...">
+                    <span id="search-btn" class="material-icons">search</span>
                 </div>
-                <div class="temp-img-container">
-                    <img id="weather-img" src="./04d@2x.png">
-                    <p id="weather-img-desc" class="info-text">Broken Clouds</p>
-                </div>
-                <div class="extra-weather-info">
-                    <div id="column1" class="column">
-                        <div class="info-container">
-                            <p class="info-text"><nobr>Max. Temp</nobr></p>
-                            <p class="value">29.0</p>
-                        </div>
-                        <div class="info-container">
-                            <p class="info-text"><nobr>Min. Temp</nobr></p>
-                            <p class="value">29.0</p>
-                        </div>
-                    </div>
-                    <div id="column2" class="column"> 
-                        <div class="info-container">
-                            <p class="info-text">Humidity</p>
-                            <p class="value">29.0</p>
-                        </div>
-                        <div class="info-container">
-                            <p class="info-text">Pressure</p>
-                            <p class="value">29.0</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="daily-weather-container">
-                <div id="day1" class="daily-weather-info left-col-grid">
-                    <p class="weather-date">25/07</p>
-                    <img src="./04d@2x.png" height="70" width="70">
-                    <p class="temp-info-daily">Max. Temp</p>
-                    <p class="temp-value-daily">29.0</p>
-                    <p class="temp-info-daily">Min. Temp</p>
-                    <p class="temp-value-daily">29.0</p>
-                </div>
-                <div id="day2" class="daily-weather-info">
-                    
-                </div>
-                <div id="day3" class="daily-weather-info right-col-grid">
-                    
-                </div>
-                <div id="day4" class="daily-weather-info left-col-grid">
-                    
-                </div>
-                <div id="day5" class="daily-weather-info">
-                    
-                </div>
-            </div>
+                <button id="switch-units-btn">
+                    <span id="opt-celcius" class="unit-option-selected">°C</span>
+                    <span id="opt-farenheit">°F</span>
+                </button>
+            </nav>
+    
+            <footer>
+                <p>Made by <a href="https://github.com/fwendeburg">Francisco Wendeburg</a> using the <a href="https://openweathermap.org/">OpenWeather API</a></p>
+            </footer>
         </div>
-
-        <footer>
-            <p>Made by <a href="https://github.com/fwendeburg">Francisco Wendeburg</a> using the <a href="https://openweathermap.org/">OpenWeather API</a></p>
-        </footer>
     </body>
 </html>
