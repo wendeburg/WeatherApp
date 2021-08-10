@@ -61,7 +61,7 @@ const main = ( () => {
 
             dailyWeatherContainer.insertAdjacentHTML('beforeend', `
             <div id="day${i+1}" class="daily-weather-info">
-                <p class="weather-date">25/07</p>
+                <p class="weather-date">${iDayData['day_month']}</p>
                 <img src="https://openweathermap.org/img/wn/${iDayData['weather_icon']}@4x.png" height="70" width="70">
                 <p class="temp-info-daily">Max. Temp</p>
                 <p class="temp-value-daily">${iDayData['max']}${unitsMetric? '°C':'°F'}</p>
@@ -133,12 +133,15 @@ const apiFetchFns = ( () => {
     function processDailyWeatherData(data) {
         let dailyWeatherData = [];
         let iDayData;
+        let date;
 
         for (let i = 1; i <= 5; i++) {
             iDayData = data['daily'][i];
+            date = new Date(iDayData['dt'] * 1000);
 
             dailyWeatherData.push(
                 {
+                    day_month: `${date.getDate()}/${date.getMonth()+1}`,
                     max: iDayData['temp']['max'],
                     min: iDayData['temp']['min'],
                     'weather_icon': iDayData['weather'][0]['icon']
