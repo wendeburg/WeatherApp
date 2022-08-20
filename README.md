@@ -5,13 +5,8 @@ A weather app using the OpenWeather API.
 - Allows to search city to show weather for.
 - Allows to see measurments in degrees celcius and farenheit.
 
-
 ## Tech Stack
 HTML, CSS, JavaScript
-
-## Authors
-- [@fwendeburg](https://www.github.com/fwendeburg)
-
 
 ## Run Locally
 
@@ -28,3 +23,6 @@ Go to the project directory
 ```
 
 Open the index.html file with any browser
+
+## Authors
+- [@fwendeburg](https://www.github.com/fwendeburg)
