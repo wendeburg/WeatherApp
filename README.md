@@ -1,5 +1,6 @@
 # WeatherApp
 A weather app using the OpenWeather API.
+
 ## Features
 - Responsive design.
 - Allows to search city to show weather for.
